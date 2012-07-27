@@ -8,3 +8,5 @@ Temp
 *.suo
 *.unityproj
 *.userprefs
+*_Data
+*.exe
