@@ -1,7 +1,7 @@
 #pragma strict
 
-var targetPosition : Vector3;
-var targetRotation : Quaternion;
+var targetPosition = Vector3.zero;
+var targetRotation = Quaternion.identity;
 
 private var velocity : Vector3;
 
