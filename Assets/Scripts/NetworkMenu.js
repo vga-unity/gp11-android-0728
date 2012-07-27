@@ -1,32 +1,15 @@
 #pragma strict
 
-private var gameID = "GP11Android0728";
-private var roomID = "Test room";
-
-function Awake() {
-    MasterServer.RequestHostList(gameID);
-}
+private var address = "127.0.0.1";
 
 function OnGUI() {
-    roomID = GUILayout.TextField(roomID);
-    
-    if (GUILayout.Button("Make server")) {
-        Network.InitializeServer(32, 25000, !Network.HavePublicAddress());
-        MasterServer.RegisterHost(gameID, roomID);
+    if (GUILayout.Button("Server")) {
+        Network.InitializeServer(32, 25000, false);
         Destroy(gameObject);
     }
-
-    for (var host in MasterServer.PollHostList()) {
-        GUILayout.BeginHorizontal();
-        if (GUILayout.Button(host.gameName)) {
-            Network.Connect(host);
-            Destroy(gameObject);
-        }
-        GUILayout.EndHorizontal();
-    }
-
-    if (GUILayout.Button("Reload the room list")) {
-        MasterServer.ClearHostList();
-        MasterServer.RequestHostList(gameID);
+    address = GUILayout.TextField(address);
+    if (GUILayout.Button("Client")) {
+        Network.Connect(address, 25000);
+        Destroy(gameObject);
     }
 }
