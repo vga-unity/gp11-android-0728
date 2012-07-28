@@ -5,10 +5,17 @@ var bulletPrefab : GameObject;
 var damageFxPrefab : GameObject;
 
 function Update () {
-    var move = Vector3(Input.GetAxis("Horizontal"), 0.0, Input.GetAxis("Vertical"));
-    transform.localPosition += move * speed * Time.deltaTime;
-    
-    if (move.magnitude > 0.1) transform.LookAt(transform.position + move);
+    var move = 
+        transform.right * Input.GetAxis("Horizontal") +
+        transform.forward * Input.GetAxis("Vertical");
+
+    var smoothMove = GetComponent.<SmoothMove>();
+    smoothMove.targetPosition += move * speed * Time.deltaTime;
+
+    var yaw = 300.0 * Input.GetAxis("Mouse X") * Time.deltaTime;
+    smoothMove.targetRotation = 
+        Quaternion.AngleAxis(yaw, Vector3.up) *
+        smoothMove.targetRotation;
         
     if (Input.GetButtonDown("Jump")) {
         var bulletPosition = transform.position + Vector3.up * 0.5 + transform.forward * 0.3;
