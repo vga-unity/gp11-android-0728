@@ -70,7 +70,7 @@ PlayerSettings:
   ForceInternetPermission: 0
   ForceSDCardPermission: 0
   CreateWallpaper: 0
-  StripUnusedMeshComponents: 1
+  StripUnusedMeshChannels: 0
   iPhoneSdkVersion: 988
   iPhoneTargetOSVersion: 4
   uIPrerenderedIcon: 0
@@ -110,7 +110,7 @@ PlayerSettings:
   wiiFloatingPointExceptions: 0
   wiiScreenCrashDumps: 1
   wiiMemoryLabelCount: 147
-  wiiMemorySetup: 0000000000000000000000000000000000000000
+  wiiMemorySetup: 0000000000000014020000000000000000000000
   XboxTitleId: 
   XboxImageXexPath: 
   XboxSpaPath: 
@@ -126,7 +126,6 @@ PlayerSettings:
   ps3TrophyCommId: 
   ps3TrophyPackagePath: 
   ps3ReservedMemorySizeMB: 2
-  ps3ReservedHDDSizeMB: 128
   flashStrippingLevel: 2
   firstStreamedLevelWithResources: 0
   unityRebuildLibraryVersion: 9
