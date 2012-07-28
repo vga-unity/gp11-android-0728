@@ -3,7 +3,7 @@
 ## やることリスト
 
 ### マッチング処理の実装
-  - [サンプル](http://keijiro.github.com/gp11-android-0728/demo.html)を見てみる。
+  - [サンプル](http://vga-unity.github.com/gp11-android-0728/demo.html)を見てみる。
   - Master server への登録方法。
   - Master server からの取得方法。
 
@@ -13,7 +13,7 @@
   - OnSerializeNetworkView
 
 ### おまけ：FPS にしてみる
-  - [サンプル](http://keijiro.github.com/gp11-android-0728/demo-fps.html)を見てみる。
+  - [サンプル](http://vga-unity.github.com/gp11-android-0728/demo-fps.html)を見てみる。
   - カメラの組み込み。
   - 移動方法の変更。
   - マウスによる回転。
